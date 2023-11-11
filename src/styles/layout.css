@@ -1,0 +1,28 @@
+:root {
+  --app-header-mb: 2em;
+}
+
+.app-header {
+  margin-bottom: var(--app-header-mb);
+}
+
+.app-header-title {
+}
+
+.app-header-link {
+  display: inline-flex;
+  gap: 0.25em;
+  align-items: center;
+  text-decoration: none;
+}
+
+.app-header-link svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.app-header-link[data-active] {
+  font-weight: bolder;
+  text-decoration: underline;
+}

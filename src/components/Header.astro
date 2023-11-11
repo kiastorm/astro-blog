@@ -1,0 +1,31 @@
+---
+import { SITE_TITLE } from "../config";
+import HeaderLink from "./HeaderLink.astro";
+
+export interface Props {
+	title?:  false;
+}
+
+const {
+	title,
+} = Astro.props;
+
+---
+
+<header class="app-header">
+  {title !== false && <h2>{SITE_TITLE}</h2>}
+  <nav>
+    <HeaderLink href="/" icon="akar-icons:home">Home</HeaderLink>
+    <HeaderLink href="/music" icon="akar-icons:music-album">Music</HeaderLink>
+    <HeaderLink href="/blog" icon="akar-icons:book">Writing</HeaderLink>
+    <HeaderLink href="/sketches" icon="akar-icons:paint">Sketches</HeaderLink>
+    <HeaderLink href="/photos" icon="akar-icons:image">Photos</HeaderLink>
+    <!-- <HeaderLink href="/about" icon="akar-icons:info">About</HeaderLink> -->
+    <HeaderLink href="https://twitter.com/astrodotbuild" icon="akar-icons:twitter-fill" target="_blank"
+      >Twitter</HeaderLink
+    >
+    <HeaderLink href="https://github.com/withastro/astro" icon="akar-icons:github" target="_blank"
+      >GitHub</HeaderLink
+    >
+  </nav>
+</header>

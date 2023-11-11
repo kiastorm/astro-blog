@@ -1,0 +1,38 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import '../styles/pages/home.css'
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script is:inline src="/p5.min.js"></script>
+		<script is:inline src="/sketch.js"></script>
+	</head>
+	<body>
+		<Header title={false} />
+		<main>
+			<h1>Kia Storm</h1>
+			<article class="introduction">			
+				<div class="introduction-start">
+					<img data-is-collideable data-is-circle class="introduction-avatar" src="/avatar-kia.png" loading="lazy" />
+				</div>
+				<div class="introduction-end">
+						<p>
+							I'm a frontend engineer that usually finds myself working on accessible, 
+							flexible design systems that support multiple teams and applications. 
+						</p>
+						<p>
+							Outside of tech, I spend most of my time discovering and producing music. I love to read, work on side projects, 
+							practise and watch mixed martial arts, travel and learn just about anything!
+						</p>
+					</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

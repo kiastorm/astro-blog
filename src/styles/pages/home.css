@@ -1,0 +1,64 @@
+h1 {
+  font-size: 400%;
+  text-align: center;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.introduction {
+  display: flow-root;
+}
+
+.introduction-avatar {
+  border-radius: 50%;
+}
+
+.introduction-start {
+  width: 50%;
+  float: left;
+  shape-outside: circle();
+  margin-right: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.introduction-start h1 {
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.introduction-end {
+  text-align: left;
+  font-size: 125%;
+}
+
+@media screen and (max-width: 740px) {
+  .introduction {
+    text-align: center;
+  }
+
+  .introduction-start {
+    margin-inline: auto;
+    float: unset;
+  }
+
+  .introduction-start h1 {
+    position: unset;
+    left: unset;
+    transform: unset;
+  }
+
+  .introduction-end {
+    padding-top: unset;
+  }
+}

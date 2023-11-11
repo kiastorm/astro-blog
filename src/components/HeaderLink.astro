@@ -1,0 +1,14 @@
+---
+import * as AstroIcon from 'astro-icon';
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+	icon: string;
+}
+
+const { href, class: className, icon, ...props } = Astro.props;
+const isActive = href === Astro.url.pathname;
+---
+
+<a href={href} data-active={isActive} class:list={[className, "app-header-link"]} {...props}>
+	<AstroIcon.Icon name={icon}   />
+	<slot />
+</a>
